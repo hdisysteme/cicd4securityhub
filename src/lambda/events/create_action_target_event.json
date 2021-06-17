@@ -1,0 +1,41 @@
+{
+    "Create": {
+        "RequestType": "Create",
+        "RequestId": "arn/test-stack-id/guid",
+        "StackId": "arn/test-stack-id/guid",
+        "LogicalResourceId": "TestResourceId",
+        "ResponseURL": "https://fake-url.com",
+        "ResourceProperties": {
+            "Name": "ActionName",
+            "Description": "Creater",
+            "Id": "dmzcis1234",
+            "ServiceToken": "dmzcis1234"
+        }
+    },
+    "Update": {
+        "RequestType": "Update",
+        "RequestId": "arn/test-stack-id/guid",
+        "StackId": "arn/test-stack-id/guid",
+        "LogicalResourceId": "TestResourceId",
+        "ResponseURL": "https://fake-url.com",
+        "ResourceProperties": {
+            "Name": "ActionName",
+            "Description": "Update",
+            "Id": "dmzcis1234",
+            "ServiceToken": "dmzcis1234"
+        }
+    },
+    "Delete": {
+        "RequestType": "Delete",
+        "RequestId": "arn/test-stack-id/guid",
+        "StackId": "arn/test-stack-id/guid",
+        "LogicalResourceId": "TestResourceId",
+        "ResponseURL": "https://fake-url.com",
+        "ResourceProperties": {
+            "Name": "ActionName",
+            "Description": "Delete",
+            "Id": "dmzcis1234",
+            "ServiceToken": "dmzcis1234"
+        }
+    }
+}

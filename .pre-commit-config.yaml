@@ -1,0 +1,41 @@
+fail_fast: false
+repos:
+  - repo: 'https://github.com/ambv/black'
+    rev: stable
+    hooks:
+      - id: black
+        name: Python Style Formatting
+  - repo: 'https://gitlab.com/pycqa/flake8'
+    rev: 3.8.3
+    hooks:
+      - id: flake8
+        name: Python Style (PEP8) Convention Checking on Construct Files
+        files: .*\.(py)$
+        args:
+          - '--ignore=E501,W503,D203,E231,W291,E225'
+  - repo: 'https://github.com/PyCQA/pydocstyle'
+    rev: 5.0.2
+    hooks:
+      - id: pydocstyle
+        name: Checking Documentation Strings
+        args:
+          - '--ignore=D100,D213,D406,D407,D413,D203,D104'
+  - repo: 'https://github.com/pre-commit/pre-commit-hooks'
+    rev: v2.3.0
+    hooks:
+      - id: trailing-whitespace
+      - id: check-yaml
+        name: YAML Syntax Checking
+      - id: detect-aws-credentials
+        name: Checking for AWS Credentials
+      - id: detect-private-key
+        name: Checking for any other Private Keys
+  - repo: local
+    hooks:
+      - id: pytest
+        name: Automatic Unit Testing
+        entry: .env/bin/py.test
+        language: script
+        pass_filenames: false
+        always_run: false
+        files: src/lambda/.*\.(py)$

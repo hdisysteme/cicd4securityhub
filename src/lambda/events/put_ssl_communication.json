@@ -1,0 +1,79 @@
+{
+  "version": "0",
+  "id": "00c2b477-cc4e-6f4a-ca1a-cd2b998c49f6",
+  "detail-type": "Security Hub Findings - Custom Action",
+  "source": "aws.securityhub",
+  "account": "12345678910",
+  "time": "2020-11-30T13:03:53Z",
+  "region": "eu-central-1",
+  "resources": [
+    "arn:aws:securityhub:eu-central-1:12345678910:action/custom/dmzec28"
+  ],
+  "detail": {
+    "actionName": "dmz-EC2.8",
+    "actionDescription": "EC2 instances should use Instance Metadata Service Version 2 (IMDSv2)",
+    "findings": [
+      {
+        "ProductArn": "arn:aws:securityhub:eu-central-1::product/aws/securityhub",
+        "Types": [
+          "Software and Configuration Checks/Industry and Regulatory Standards/AWS-Foundational-Security-Best-Practices"
+        ],
+        "Description": "This AWS control checks whether S3 buckets have policies that require requests to use Secure Socket Layer (SSL).",
+        "SchemaVersion": "2018-10-08",
+        "Compliance": {
+          "Status": "FAILED"
+        },
+        "GeneratorId": "aws-foundational-security-best-practices/v/1.0.0/S3.5",
+        "FirstObservedAt": "2020-11-06T09:41:04.363Z",
+        "CreatedAt": "2020-11-06T09:41:04.363Z",
+        "RecordState": "ACTIVE",
+        "Title": "S3.5 S3 buckets should require requests to use Secure Socket Layer",
+        "Workflow": {
+          "Status": "NEW"
+        },
+        "LastObservedAt": "2020-11-30T11:28:26.245Z",
+        "Severity": {
+          "Normalized": 40,
+          "Label": "MEDIUM",
+          "Product": 40,
+          "Original": "MEDIUM"
+        },
+        "UpdatedAt": "2020-11-30T11:28:24.738Z",
+        "WorkflowState": "NEW",
+        "ProductFields": {
+          "StandardsArn": "arn:aws:securityhub:::standards/aws-foundational-security-best-practices/v/1.0.0",
+          "StandardsSubscriptionArn": "arn:aws:securityhub:eu-central-1:12345678910:subscription/aws-foundational-security-best-practices/v/1.0.0",
+          "ControlId": "S3.5",
+          "RecommendationUrl": "https://docs.aws.amazon.com/console/securityhub/S3.5/remediation",
+          "RelatedAWSResources:0/name": "securityhub-s3-bucket-ssl-requests-only-a8be1a0f",
+          "RelatedAWSResources:0/type": "AWS::Config::ConfigRule",
+          "StandardsControlArn": "arn:aws:securityhub:eu-central-1:12345678910:control/aws-foundational-security-best-practices/v/1.0.0/S3.5",
+          "aws/securityhub/ProductName": "Security Hub",
+          "aws/securityhub/CompanyName": "AWS",
+          "aws/securityhub/FindingId": "arn:aws:securityhub:eu-central-1::product/aws/securityhub/arn:aws:securityhub:eu-central-1:12345678910:subscription/aws-foundational-security-best-practices/v/1.0.0/S3.5/finding/87af3c0d-235a-4c68-9b0a-c338a70b4e31"
+        },
+        "AwsAccountId": "12345678910",
+        "Id": "arn:aws:securityhub:eu-central-1:12345678910:subscription/aws-foundational-security-best-practices/v/1.0.0/S3.5/finding/87af3c0d-235a-4c68-9b0a-c338a70b4e31",
+        "Remediation": {
+          "Recommendation": {
+            "Text": "For directions on how to fix this issue, please consult the AWS Security Hub Foundational Security Best Practices documentation.",
+            "Url": "https://docs.aws.amazon.com/console/securityhub/S3.5/remediation"
+          }
+        },
+        "Resources": [
+          {
+            "Partition": "aws",
+            "Type": "AwsS3Bucket",
+            "Details": {
+              "AwsS3Bucket": {
+                "OwnerId": "482cb5f6cf45efdc5c9a19a6a1bdc5c4517b8196ae908f2e992c1dff81151b1a"
+              }
+            },
+            "Region": "eu-central-1",
+            "Id": "arn:aws:s3:::my-bucket"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+[run]
+omit =
+    .env/*,
+    .venv/*,
+    src/lambda/test_custom_resource.py,
+    src/lambda/test_lambdas.py
+
+[paths]
+source = src/lambda/
+
+[xml]
+output = tests/coverage.xml

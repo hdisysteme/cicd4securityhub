@@ -1,0 +1,32 @@
+{
+    "Create": {
+        "RequestType": "Create",
+        "RequestId": "test-event-id",
+        "StackId": "arn/test-stack-id/guid",
+        "LogicalResourceId": "TestResourceId",
+        "ResponseURL": "https://fake-url.com",
+        "ResourceProperties": {
+            "IntegrationARN": "arn:aws:securityhub:eu-central-1::product/prowler/prowler",
+            "ProjectName": "project_name"
+        }
+    },
+    "Delete": {
+        "RequestType": "Create",
+        "RequestId": "test-event-id",
+        "StackId": "arn/test-stack-id/guid",
+        "LogicalResourceId": "TestResourceId",
+        "ResponseURL": "https://fake-url.com",
+        "ResourceProperties": {
+            "IntegrationARN": "arn:aws:securityhub:eu-central-1::product/prowler/prowler",
+            "ProjectName": "project_name"
+        }
+    },
+    "KeyError": {
+        "RequestType": "Create",
+        "RequestId": "test-event-id",
+        "StackId": "arn/test-stack-id/guid",
+        "LogicalResourceId": "TestResourceId",
+        "ResponseURL": "https://fake-url.com",
+        "ResourceProperties": {"ProjectName": "project_name"}
+    }
+}

@@ -1,0 +1,60 @@
+{
+  "version": "0",
+  "id": "4024f825-2010-350c-5af5-2498f0b4a228",
+  "detail-type": "Security Hub Findings - Custom Action",
+  "source": "aws.securityhub",
+  "account": "12345678910",
+  "time": "2020-12-16T08:49:15Z",
+  "region": "eu-central-1",
+  "resources": [
+    "arn:aws:securityhub:eu-central-1:12345678910:action/custom/dmzapplypatch"
+  ],
+  "detail": {
+    "actionName": "dmz-Enable Patching",
+    "actionDescription": "Applies Security Patches via System Manager documents",
+    "findings": [
+      {
+        "ProductArn": "arn:aws:securityhub:eu-central-1::product/prowler/prowler",
+        "Types": [
+          "Software and Configuration Checks"
+        ],
+        "Description": "eu-central-1: snap-050a2c1f176c1f97d is currently not encrypted!",
+        "SchemaVersion": "2018-10-08",
+        "Compliance": {
+          "Status": "FAILED"
+        },
+        "GeneratorId": "prowler-extra740",
+        "FirstObservedAt": "2020-12-15T05:17:58Z",
+        "RecordState": "ACTIVE",
+        "CreatedAt": "2020-11-21T10:21:08Z",
+        "Title": "[extra740] Check if EBS snapshots are encrypted (Not Scored) (Not part of CIS benchmark)",
+        "Workflow": {
+          "Status": "NEW"
+        },
+        "Severity": {
+          "Normalized": 40,
+          "Label": "MEDIUM"
+        },
+        "UpdatedAt": "2020-12-15T05:17:58Z",
+        "WorkflowState": "NEW",
+        "ProductFields": {
+          "ProviderName": "Prowler",
+          "ProviderVersion": "2.3.0RC5",
+          "aws/securityhub/FindingId": "arn:aws:securityhub:eu-central-1::product/prowler/prowler/prowler-7.40-12345678910-eu-central-1-eu-central-1_snap-050a2c1f176c1f97d_is_currently_not_encrypted_",
+          "aws/securityhub/ProductName": "Prowler",
+          "aws/securityhub/CompanyName": "Prowler"
+        },
+        "AwsAccountId": "12345678910",
+        "Id": "prowler-7.40-12345678910-eu-central-1-eu-central-1_snap-050a2c1f176c1f97d_is_currently_not_encrypted_",
+        "Resources": [
+          {
+            "Partition": "aws",
+            "Type": "AwsEc2Snapshot",
+            "Region": "eu-central-1",
+            "Id": "AWS::::Account:12345678910"
+          }
+        ]
+      }
+    ]
+  }
+}

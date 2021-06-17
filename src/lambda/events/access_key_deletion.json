@@ -1,0 +1,85 @@
+{
+  "version": "0",
+  "id": "536f21c5-3e99-168f-a6bf-4ae44cb351f7",
+  "detail-type": "Security Hub Findings - Custom Action",
+  "source": "aws.securityhub",
+  "account": "12345678910",
+  "time": "2020-11-30T09:56:57Z",
+  "region": "eu-central-1",
+  "resources": [
+    "arn:aws:securityhub:eu-central-1:12345678910:action/custom/dmzcis134"
+  ],
+  "detail": {
+    "actionName": "dmz-CIS 1.3/1.4",
+    "actionDescription": "Remediates CIS 1.3 and CIS 1.4 by Deleting IAM Keys over 90 Days Old",
+    "findings": [
+      {
+        "ProductArn": "arn:aws:securityhub:eu-central-1::product/aws/securityhub",
+        "Types": [
+          "Software and Configuration Checks/Industry and Regulatory Standards/AWS-Foundational-Security-Best-Practices"
+        ],
+        "Description": "This AWS control checks whether the active access keys are rotated within 90 days.",
+        "SchemaVersion": "2018-10-08",
+        "Compliance": {
+          "Status": "FAILED"
+        },
+        "GeneratorId": "aws-foundational-security-best-practices/v/1.0.0/IAM.3",
+        "FirstObservedAt": "2020-11-24T19:49:07.448Z",
+        "CreatedAt": "2020-11-24T19:49:07.448Z",
+        "RecordState": "ACTIVE",
+        "Title": "IAM.3 IAM users: access keys should be rotated every 90 days or less",
+        "Workflow": {
+          "Status": "NEW"
+        },
+        "LastObservedAt": "2020-11-29T18:10:11.959Z",
+        "Severity": {
+          "Normalized": 40,
+          "Label": "MEDIUM",
+          "Product": 40,
+          "Original": "MEDIUM"
+        },
+        "UpdatedAt": "2020-11-29T18:10:10.021Z",
+        "WorkflowState": "NEW",
+        "ProductFields": {
+          "StandardsArn": "arn:aws:securityhub:::standards/aws-foundational-security-best-practices/v/1.0.0",
+          "StandardsSubscriptionArn": "arn:aws:securityhub:eu-central-1:12345678910:subscription/aws-foundational-security-best-practices/v/1.0.0",
+          "ControlId": "IAM.3",
+          "RecommendationUrl": "https://docs.aws.amazon.com/console/securityhub/IAM.3/remediation",
+          "RelatedAWSResources:0/name": "securityhub-access-keys-rotated-6a42d5a5",
+          "RelatedAWSResources:0/type": "AWS::Config::ConfigRule",
+          "StandardsControlArn": "arn:aws:securityhub:eu-central-1:12345678910:control/aws-foundational-security-best-practices/v/1.0.0/IAM.3",
+          "aws/securityhub/ProductName": "Security Hub",
+          "aws/securityhub/CompanyName": "AWS",
+          "aws/securityhub/FindingId": "arn:aws:securityhub:eu-central-1::product/aws/securityhub/arn:aws:securityhub:eu-central-1:12345678910:subscription/aws-foundational-security-best-practices/v/1.0.0/IAM.3/finding/f13aa1d3-e917-471b-8b2a-66ee1ef4330b"
+        },
+        "AwsAccountId": "12345678910",
+        "Id": "arn:aws:securityhub:eu-central-1:12345678910:subscription/aws-foundational-security-best-practices/v/1.0.0/IAM.3/finding/f13aa1d3-e917-471b-8b2a-66ee1ef4330b",
+        "Remediation": {
+          "Recommendation": {
+            "Text": "For directions on how to fix this issue, please consult the AWS Security Hub Foundational Security Best Practices documentation.",
+            "Url": "https://docs.aws.amazon.com/console/securityhub/IAM.3/remediation"
+          }
+        },
+        "Resources": [
+          {
+            "Partition": "aws",
+            "Type": "AwsIamUser",
+            "Details": {
+              "AwsIamUser": {
+                "Path": "/",
+                "UserName": "svc_SNOW_Discovery",
+                "GroupList": [
+                  "IAM-Group"
+                ],
+                "UserId": "AIDARSAEUV6I7B5SODHZN",
+                "CreateDate": "2020-08-26T08:32:46.000Z"
+              }
+            },
+            "Region": "eu-central-1",
+            "Id": "arn:aws:iam::12345678910:user/demo_user"
+          }
+        ]
+      }
+    ]
+  }
+}
