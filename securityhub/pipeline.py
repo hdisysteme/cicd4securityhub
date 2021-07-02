@@ -120,11 +120,8 @@ class Pipeline(core.Stack):
 
         print("Building/Updating Stage")
 
-        # TODO: Insert your AWS account id
         stage = DevSecurityOpsStage(
-            self,
-            id="sec-ops-utilities",
-            env=core.Environment(account="800524020870", region="eu-central-1"),
+            self, id="sec-ops-utilities", env=core.Environment(region="eu-central-1"),
         )
         cicd.add_application_stage(stage)
 

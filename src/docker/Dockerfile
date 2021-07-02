@@ -1,10 +1,4 @@
-FROM python:3.9-alpine
-
-#A dd a user with userid 8877 and name nonroot
-RUN useradd −u 8877 nonroot
-
-# Run Container as nonroot
-USER nonroot
+FROM alpine:3.9
 
 # Install Dependencies
 RUN \
@@ -13,12 +7,24 @@ RUN \
     pip3 install --upgrade pip && \
     pip3 install boto3 awscli detect-secrets
 
-COPY script.sh /root
+COPY ./src/docker/script.sh /root
 
 # Installs prowler and moves scripts into prowler directory
 RUN \
     git clone https://github.com/toniblyx/prowler && \
     mv root/script.sh /prowler
+
+# Create a user group 'prowlergroup'
+RUN addgroup -S prowlergroup
+
+# Create a user 'prowleruser' under 'prowlergroup'
+RUN adduser -S -D -h /prowler prowleruser prowlergroup
+
+# Chown all the files to the app user.
+RUN chown -R prowleruser:prowlergroup /prowler
+
+# Switch to 'appuser'
+USER prowleruser
 
 # Runs prowler
 WORKDIR /prowler

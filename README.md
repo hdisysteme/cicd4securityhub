@@ -91,6 +91,22 @@ stage = DevSecurityOpsStage(
 * Run `cdk deploy cicd-4-securityhub` to create the CICD.
 * Change the origin of this Git repository to CodeCommitand push your file to [CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-migrate-repository-existing.html#how-to-migrate-existing-clone).
 
+## Prowler Deployment
+
+* To deploy the Prowler Docker image, us the following commands with your repository.
+
+```bash
+# ./src/docker/
+aws ecr get-login-password --region eu-central-1 | \
+    docker login --username AWS --password-stdin \
+    ACCOUTN_ID.dkr.ecr.eu-central-1.amazonaws.com # Your Auto Account ID
+docker build -t prowler-image:latest .
+docker tag prowler-image:latest \
+    ACCOUTN_ID.dkr.ecr.eu-central-1.amazonaws.com/prowler-image:latest
+docker push \
+    ACCOUTN_ID.dkr.ecr.eu-central-1.amazonaws.com/prowler-image:latest
+```
+
 ## SonarQube Results
 
 ![](img/codequality.png)
