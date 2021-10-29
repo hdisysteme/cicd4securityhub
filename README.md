@@ -1,6 +1,6 @@
 # Automated Security and Compliance Remediation at HDI
 
-This is the corresponding repository of AWS Blog post "Automated Security and Compliance Remediation at HDI".
+This is the corresponding repository of AWS Blog post ["Automated Security and Compliance Remediation at HDI"](https://aws.amazon.com/blogs/devops/automated-security-and-compliance-remediation-at-hdi/).
 
 ## Disclaimer
 
