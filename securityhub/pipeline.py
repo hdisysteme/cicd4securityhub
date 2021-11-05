@@ -85,6 +85,7 @@ class Pipeline(core.Stack):
         cicd = _pipelines.CdkPipeline(
             self,
             id="cicd",
+            cross_account_keys=True,  # TODO: remove if needed
             cloud_assembly_artifact=cloud_assembly_artifact,
             pipeline_name="dev-sec-ops-pipeline",
             source_action=_codepipeline_actions.CodeCommitSourceAction(

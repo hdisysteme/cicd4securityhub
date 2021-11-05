@@ -78,16 +78,6 @@ cicd = Pipeline(
 )
 ```
 
-```python
-# auto_ops.py
-# TODO: Insert your AWS account id
-stage = DevSecurityOpsStage(
-    self,
-    id="sec-ops-utilities",
-    env=core.Environment(account="12345678910", region="eu-central-1"),
-)
-```
-
 * Run `cdk deploy cicd-4-securityhub` to create the CICD.
 * Change the origin of this Git repository to CodeCommitand push your file to [CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-migrate-repository-existing.html#how-to-migrate-existing-clone).
 
