@@ -90,11 +90,11 @@ cicd = Pipeline(
 aws ecr get-login-password --region eu-central-1 | \
     docker login --username AWS --password-stdin \
     ACCOUTN_ID.dkr.ecr.eu-central-1.amazonaws.com # Your Auto Account ID
-docker build -t prowler-image:latest .
-docker tag prowler-image:latest \
-    ACCOUTN_ID.dkr.ecr.eu-central-1.amazonaws.com/prowler-image:latest
+docker build -t ECR_REPO_NAME:latest .
+docker tag ECR_REPO_NAME:latest \
+    ACCOUTN_ID.dkr.ecr.eu-central-1.amazonaws.com/ECR_REPO_NAME:latest
 docker push \
-    ACCOUTN_ID.dkr.ecr.eu-central-1.amazonaws.com/prowler-image:latest
+    ACCOUTN_ID.dkr.ecr.eu-central-1.amazonaws.com/ECR_REPO_NAME:latest
 ```
 
 ## SonarQube Results

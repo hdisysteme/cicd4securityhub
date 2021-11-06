@@ -137,3 +137,5 @@ class Pipeline(core.Stack):
         core.CfnOutput(
             self, id="git-grc-url", value=git.repository_clone_url_grc,
         )
+
+        core.CfnOutput(self, id="ecr-registry", value=docker_repo.repository_uri)

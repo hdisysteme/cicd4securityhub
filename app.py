@@ -8,7 +8,7 @@ app = core.App()
 cicd = Pipeline(
     app,
     id="cicd-4-securityhub",
-    env=core.Environment(account="800524020870", region="eu-central-1"),
+    env=core.Environment(account="12345678910", region="eu-central-1"),
 )
 core.Tags.of(cicd).add("Name", "Security Hub App")
 
