@@ -128,7 +128,7 @@ class EnableProwlerScanning(_cfn.NestedStack):
         lambda_enable_prowler = _lambda.Function(
             self,
             id="enable-prowler",
-            handler="enable_prowler.enable_integration",
+            handler="index.enable_integration",
             code=_lambda.Code.from_inline(inline_code),
             memory_size=128,
             runtime=_lambda.Runtime.PYTHON_3_7,
